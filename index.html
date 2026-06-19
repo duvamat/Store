@@ -185,10 +185,19 @@
     .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.1); }
     .card-img {
       height: 180px;
-      display: grid;
-      place-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 3.2rem;
       background: var(--cream);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .card-img.lakay-bg  { background: #ECFDF5; }
     .card-img.books-bg  { background: #FFFBEB; }
@@ -208,7 +217,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 1rem;
+      margin-top: auto;
+      padding-top: .8rem;
     }
     .price { font-weight: 700; font-size: 1.1rem; color: var(--green); }
     .old-price { font-size: .8rem; color: var(--gray); text-decoration: line-through; margin-left: .3rem; }
