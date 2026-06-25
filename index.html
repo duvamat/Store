@@ -399,7 +399,7 @@ color:white;font-size:18px;cursor:pointer;
 <div class="hero-content">
 <h1>Bienvenue sur<br>DUVAMAT</h1>
 <p>Votre marché en ligne. Achetez vos produits, découvrez nos offres et profitez d'une expérience simple.</p>
-<button onclick="document.getElementById('prodwi').scrollIntoView({behavior:'smooth'})">Acheter maintenant</button>
+<a href="#prodwi" style="text-decoration:none;"><button class="btn-hero" style="cursor:pointer;">Acheter maintenant</button></a>
 </div>
 </section>
 
@@ -697,10 +697,10 @@ color:white;font-size:18px;cursor:pointer;
 <script>
   // ── DUVAMAT — PANIER + COMMANDES ──
   let cartItems = [];
-  let orderCounter = parseInt(localStorage.getItem('duvamat_order_counter') || '0');
+  localStorage.setItem('duvamat_order_counter', '0'); let orderCounter = 0;
 
   // Remplacez par votre URL Apps Script après déploiement
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyFz3yciI-q5UfLhkBmI6AvcWPAOMqET2CDwGCT0NoU5FJj93QKNUg0PWROR-clq6Oa/exec';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzn18OFNYK5ZSEegYVxKZ1JcDvp0XTIArcecHsTtvFgfdhstYdJmAuP5e62znYgG092/exec';
 
   const cartNavLink   = document.getElementById('nav-cart-link');
   const cartEmptyMsg  = document.getElementById('cart-empty');
